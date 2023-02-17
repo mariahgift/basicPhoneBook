@@ -1,0 +1,22 @@
+
+    <div class = "createContact">
+        <label for="contact-name">Full name: </label> <br>
+        <input type="text" [(ngModel)]="newContactName" placeholder="Enter the contact name"> <br> <br>
+    
+        <label for="contact-name">Phone number: </label> <br>
+        <input type="text" [(ngModel)]="newContactNumber" placeholder="Enter the contact number"> <br> <br>
+    
+        <button (click)="addContact()" id="addContactButton">Create new contact</button>
+    </div>
+    
+    <div class="listOfContact">
+        <div *ngFor="let contact of contactInfo" id="phoneBook">
+            <p>{{contact.name}}</p>
+            <p>{{contact.contactNumber}}</p>
+            <button (click)="updateContact(contact)">Update</button>
+            <button (click)="deleteContact(contact)">Delete</button>
+        </div>
+        <br>
+    </div>
+
+
