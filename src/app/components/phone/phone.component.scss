@@ -1,0 +1,103 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #008CBA;
+}
+
+.button-create {
+    text-align: center;
+}
+
+.createContact {
+    padding: 20px;
+    width: 40%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto; 
+}
+
+.listOfContact {
+    padding: 30px;
+    margin: 20px;
+}
+
+#phoneBook {  
+    width: 29%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #008CBA;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+  
+  #phoneBook:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+button {
+        margin: 5px;
+    }
+
+
+#addContactButton {
+    background-color: #ECF2FF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-self: center;
+}
+
+#addContactButton:hover {   
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+hr {
+    border-top: 1px solid;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    }
+
+#phoneBook img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+#updateButton {
+    background-color: white;
+    border: none;
+    padding: 2px 5px;
+}
+
+#updateButton:hover {
+    background-color: green;
+    color: white;
+}
+
+#deleteButton {
+    background-color: white;
+    border: none;
+    padding: 2px 5px;
+}
+
+#deleteButton:hover {
+    background-color: red;
+    color: white;
+}

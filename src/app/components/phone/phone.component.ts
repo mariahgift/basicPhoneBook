@@ -5,7 +5,7 @@ import { CONTACTINFO } from 'src/app/mock-data/mock-contact-info';
 @Component({
   selector: 'app-phone',
   templateUrl: './phone.component.html',
-  styleUrls: ['./phone.component.css']
+  styleUrls: ['./phone.component.scss']
 })
 export class PhoneComponent {
   contactInfo = CONTACTINFO;
