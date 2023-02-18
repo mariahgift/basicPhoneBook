@@ -1,9 +1,15 @@
+$lightBlue: #008CBA;
+$white: white;
+$paddingButton: 2px 5px;
+$grayShadow: rgba(0,0,0,0.2);
+
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: none;
-    border-bottom: 2px solid #008CBA;
+    border-bottom: 2px solid $lightblue;
 }
 
 .button-create {
@@ -33,18 +39,18 @@ input[type=text] {
     padding: 10px;
     margin: 10px;
     display: inline-block;
-    background-color: #008CBA;
-    color: #FFFFFF;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: $lightblue;
+    color: $white;
+    box-shadow: 0 4px 8px 0 $grayShadow;
     transition: 0.3s;
 }
   
   #phoneBook:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 $grayShadow;
   }
 
 button {
-        margin: 5px;
+    margin: 5px;
     }
 
 
@@ -81,23 +87,23 @@ hr {
 }
 
 #updateButton {
-    background-color: white;
+    background-color: $white;
     border: none;
-    padding: 2px 5px;
+    padding: $paddingButton;
 }
 
 #updateButton:hover {
     background-color: green;
-    color: white;
+    color: $white;
 }
 
 #deleteButton {
-    background-color: white;
+    background-color: $white;
     border: none;
-    padding: 2px 5px;
+    padding: $paddingButton;
 }
 
 #deleteButton:hover {
     background-color: red;
-    color: white;
+    color: $white;
 }
