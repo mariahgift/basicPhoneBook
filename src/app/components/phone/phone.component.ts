@@ -13,17 +13,15 @@ export class PhoneComponent {
   newContactName = '';
   newContactNumber = '';
   newContact = '';
+  updateContactDetails?: contactInfo;
 
   addContact() {
     this.contactInfo.push({name: this.newContactName, contactNumber: this.newContactNumber});
     this.newContact = '';
   }
 
-  updateContact(contactName: contactInfo) {
-   let indexToUpdate = this.contactInfo.indexOf(contactName);
-   contactName.name = 'Emma Watson';
-   contactName.contactNumber = '090909090';
-   this.contactInfo[indexToUpdate] = contactName;
+  updateContact(contact: contactInfo) {
+   this.updateContactDetails = contact;
 
   }
 
