@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { contactInfo } from 'src/app/interfaces/contact-info';
 import { CONTACTINFO } from 'src/app/mock-data/mock-contact-info';
+import { PhoneBookService } from 'src/app/services/phone-book.service';
 
 @Component({
   selector: 'app-phone',
@@ -8,17 +9,17 @@ import { CONTACTINFO } from 'src/app/mock-data/mock-contact-info';
   styleUrls: ['./phone.component.scss']
 })
 export class PhoneComponent {
-  contactInfo = CONTACTINFO;
+  contact: contactInfo[] = [];
 
-  newContactName = '';
-  newContactNumber = '';
-  newContact = '';
-  updateContactDetails?: contactInfo;
+  constructor(private phoneBookService: PhoneBookService) { }
 
-  addContact() {
-    this.contactInfo.push({name: this.newContactName, contactNumber: this.newContactNumber});
-    this.newContact = '';
+  ngOnInit() {
+    this.phoneBookService.getContact().subscribe(contact => {
+      this.contact = contact;
+    })
   }
+
+  updateContactDetails?: contactInfo;
 
   updateContact(contact: contactInfo) {
     this.updateContactDetails = contact;
