@@ -15,4 +15,9 @@ export class PhoneBookService {
   getContact(): Observable<contactInfo[]> {
     return of(this.contactInfo);
   }
+
+  updateContactDetails?: contactInfo;
+  updateContact(contact: contactInfo): Observable<contactInfo> {  
+    return of(this.updateContactDetails = contact);
+  }
 }

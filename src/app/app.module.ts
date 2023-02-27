@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PhoneComponent } from './components/phone/phone.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { UpdateContactComponent } from './components/update-contact/update-contact.component';
+import { DeleteContactComponent } from './components/delete-contact/delete-contact.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { UpdateContactComponent } from './components/update-contact/update-conta
     AppComponent,
     PhoneComponent,
     AddContactComponent,
-    UpdateContactComponent
+    UpdateContactComponent,
+    DeleteContactComponent
   ],
   imports: [
     BrowserModule,

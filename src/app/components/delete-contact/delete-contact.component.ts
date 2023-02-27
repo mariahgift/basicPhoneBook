@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { contactInfo } from 'src/app/interfaces/contact-info';
-import { CONTACTINFO } from 'src/app/mock-data/mock-contact-info';
 import { PhoneBookService } from 'src/app/services/phone-book.service';
-import { UpdateContactComponent } from '../update-contact/update-contact.component';
 
 @Component({
-  selector: 'app-phone',
-  templateUrl: './phone.component.html',
-  styleUrls: ['./phone.component.scss']
+  selector: 'app-delete-contact',
+  templateUrl: './delete-contact.component.html',
+  styleUrls: ['./delete-contact.component.scss']
 })
-export class PhoneComponent {
+export class DeleteContactComponent {
   contact: contactInfo[] = [];
 
   constructor(private phoneBookService: PhoneBookService) { }
@@ -18,11 +16,6 @@ export class PhoneComponent {
     this.phoneBookService.getContact().subscribe(contact => {
       this.contact = contact;
     })
-  }
-
-  updateContactDetails?: contactInfo;
-  updateContact(contact: contactInfo) {
-    this.updateContactDetails = contact;
   }
 
   deleteContact(contactName: contactInfo) {

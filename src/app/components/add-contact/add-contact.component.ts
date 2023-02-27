@@ -14,9 +14,7 @@ export class AddContactComponent {
   newContactNumber = '';
   newContact = '';
 
-
   constructor (private phoneBookService: PhoneBookService) { }
-
 
   ngOnInit() {
     this.phoneBookService.getContact().subscribe(contact => {

@@ -4,25 +4,25 @@
     <br>
 
     <div class = "createContact" *ngIf="updateContactDetails">
+
         <label for="contact-name" class="contact-field">Change full name </label> <br>
         <input type="text" [(ngModel)]="updateContactDetails.name" placeholder="Enter the contact name"> <br> <br>
     
         <label for="contact-number" class="contact-field">Change Phone number </label> <br>
         <input type="text" [(ngModel)]="updateContactDetails.contactNumber" placeholder="Enter the contact number"> <br> <br>
-    
     </div>
+    
     
     <!-- <hr> -->
-    
-    <div class="listOfContact">
-        <div *ngFor="let contact of contactInfo" id="phoneBook">
-            <img src="../../../assets/img/profile.png" alt="photo">
-            <p>{{contact.name}}</p>
-            <p>{{contact.contactNumber}}</p>
-            <button [class.selected] = "contact === updateContactDetails" (click)="updateContact(contact)" id="updateButton">Update</button>
-            <button (click)="deleteContact(contact)" id="deleteButton">Delete</button>
-        </div>
-        <br>
+<div class="listOfContact">
+    <div *ngFor="let contact of contact" id="phoneBook">
+        <img src="../../../assets/img/profile.png" alt="photo">
+        <p>{{contact.name}}</p>
+        <p>{{contact.contactNumber}}</p>
+        <app-update-contact></app-update-contact>
+        <button [class.selected] = "contact === updateContactDetails" (click)="updateContact(contact)" id="updateButton">Update</button>
+        <button (click)="deleteContact(contact)" id="deleteButton">Delete</button>
     </div>
-
+    <br>
+</div>
 
