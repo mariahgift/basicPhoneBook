@@ -23,8 +23,8 @@ export class AddContactComponent {
   }
 
   addContact() {
-    //const contact = this.phoneBookService.getContact();
-    this.contact.push({name: this.newContactName, contactNumber: this.newContactNumber});
-    this.newContact = '';
+      //const contact = this.phoneBookService.getContact();
+        this.contact.push({name: this.newContactName, contactNumber: this.newContactNumber});
+        this.newContact = '';
   }
 }
