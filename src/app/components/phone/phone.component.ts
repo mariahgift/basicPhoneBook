@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { contactInfo } from 'src/app/interfaces/contact-info';
-import { CONTACTINFO } from 'src/app/mock-data/mock-contact-info';
 import { PhoneBookService } from 'src/app/services/phone-book.service';
-import { UpdateContactComponent } from '../update-contact/update-contact.component';
 
 @Component({
   selector: 'app-phone',
@@ -29,4 +27,5 @@ export class PhoneComponent {
     let indexToDelete = this.contact.indexOf(contactName);
     this.contact.splice(indexToDelete, 1);
   }
+
 }

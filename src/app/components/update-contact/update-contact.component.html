@@ -1,2 +1,10 @@
+<div class = "createContact" *ngIf="updateContactDetails">
+    <label for="contact-name" class="contact-field">Change full name </label> <br>
+    <input type="text" [(ngModel)]="updateContactDetails.name" placeholder="Enter the contact name"> <br> <br>
+
+    <label for="contact-number" class="contact-field">Change Phone number </label> <br>
+    <input type="text" [(ngModel)]="updateContactDetails.contactNumber" placeholder="Enter the contact number"> <br> <br>
+</div>
+
 
 
