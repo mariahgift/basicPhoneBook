@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { contactInfo } from 'src/app/interfaces/contact-info';
 import { PhoneBookService } from 'src/app/services/phone-book.service';
 
@@ -7,11 +7,8 @@ import { PhoneBookService } from 'src/app/services/phone-book.service';
   templateUrl: './phone.component.html',
   styleUrls: ['./phone.component.scss']
 })
-export class PhoneComponent {
+export class PhoneComponent implements OnInit {
   contact: contactInfo[] = [];
-  newContactName = '';
-  newContactNumber = '';
-  newContact = '';
 
   constructor(private phoneBookService: PhoneBookService) { }
 

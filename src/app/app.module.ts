@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PhoneComponent } from './components/phone/phone.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { PhoneBookService } from './services/phone-book.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PhoneBookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
