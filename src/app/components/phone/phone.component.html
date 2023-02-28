@@ -3,7 +3,13 @@
 
     <br>
 
-    <app-update-contact></app-update-contact>
+    <div class = "createContact" *ngIf="updateContactDetails">
+        <label for="contact-name" class="contact-field">Change full name </label> <br>
+        <input type="text" [(ngModel)]="updateContactDetails.name" placeholder="Enter the contact name"> <br> <br>
+    
+        <label for="contact-number" class="contact-field">Change Phone number </label> <br>
+        <input type="text" [(ngModel)]="updateContactDetails.contactNumber" placeholder="Enter the contact number"> <br> <br>
+    </div>
     
     <!-- <hr> -->
 <div class="listOfContact">
@@ -13,7 +19,6 @@
         <p>{{contact.contactNumber}}</p>
         <button [class.selected] = "contact === updateContactDetails" (click)="updateContact(contact)" id="updateButton">Update</button>
         <button (click)="deleteContact(contact)" id="deleteButton">Delete</button> 
-        <app-delete-contact></app-delete-contact>
     </div>
     <br>
 </div>

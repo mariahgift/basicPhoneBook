@@ -9,6 +9,9 @@ import { PhoneBookService } from 'src/app/services/phone-book.service';
 })
 export class PhoneComponent {
   contact: contactInfo[] = [];
+  newContactName = '';
+  newContactNumber = '';
+  newContact = '';
 
   constructor(private phoneBookService: PhoneBookService) { }
 

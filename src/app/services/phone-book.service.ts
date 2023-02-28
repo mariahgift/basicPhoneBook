@@ -9,6 +9,7 @@ import { CONTACTINFO } from '../mock-data/mock-contact-info';
 export class PhoneBookService {
 
   contactInfo = CONTACTINFO;
+  contact: any;
   constructor() { }
 
 
@@ -19,5 +20,10 @@ export class PhoneBookService {
   updateContactDetails?: contactInfo;
   updateContact(contact: contactInfo): Observable<contactInfo> {  
     return of(this.updateContactDetails = contact);
+  }
+
+  deleteContact(contactName: contactInfo) {
+    let indexToDelete = this.contact.indexOf(contactName);
+    this.contact.splice(indexToDelete, 1);
   }
 }

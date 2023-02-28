@@ -6,17 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PhoneComponent } from './components/phone/phone.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
-import { UpdateContactComponent } from './components/update-contact/update-contact.component';
-import { DeleteContactComponent } from './components/delete-contact/delete-contact.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PhoneComponent,
-    AddContactComponent,
-    UpdateContactComponent,
-    DeleteContactComponent
+    AddContactComponent
   ],
   imports: [
     BrowserModule,
