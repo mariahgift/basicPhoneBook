@@ -36,14 +36,11 @@ export class AddContactComponent {
   );
  
 
-  if (!contactExists) {
-    this.contact.push(newContact);
-  } else {
-    this.errorMessage = "The name or phone number is already exist. You can update the data below.";
-  }
-}
+    if (!contactExists) {
+      this.contact.push(newContact);
+    } else {
+      this.errorMessage = "The name or phone number is already exist. You can update the data below.";
+    }
 
-  
-
-
+  } //end of addContact
 }

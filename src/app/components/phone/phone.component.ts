@@ -18,6 +18,7 @@ export class PhoneComponent implements OnInit {
     })
   }
 
+
   updateContactDetails?: contactInfo;
   updateContact(contact: contactInfo) {
     this.updateContactDetails = contact;

@@ -22,14 +22,5 @@ export class PhoneBookService {
     this.contact.push(contact);
     return of(contact);
   }
-
-  updateContactDetails?: contactInfo;
-  updateContact(contact: contactInfo): Observable<contactInfo> {  
-    return of(this.updateContactDetails = contact);
-  }
-
-  deleteContact(contactName: contactInfo) {
-    let indexToDelete = this.contact.indexOf(contactName);
-    this.contact.splice(indexToDelete, 1);
-  }
+  
 }
