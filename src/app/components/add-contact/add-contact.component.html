@@ -4,8 +4,11 @@
 
     <label for="contact-number" class="contact-field">Phone number </label> <br>
     <input type="text" [(ngModel)]="newContactNumber" placeholder="Enter the contact number"> <br> <br>
-
+   
+   <div id="errorMessage" *ngIf="errorMessage"><span>Warning: </span>{{ errorMessage }}</div>
     <div class="button-create">
-        <button (click)="addContact()" id="addContactButton">Create new contact</button>
+        <button (click) ="addContact()" id="addContactButton">Create new contact</button>
     </div>
+
+  
 </div>

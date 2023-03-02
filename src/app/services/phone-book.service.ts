@@ -7,14 +7,20 @@ import { CONTACTINFO } from '../mock-data/mock-contact-info';
   providedIn: 'root'
 })
 export class PhoneBookService {
-
+  contact: contactInfo[] = [];
   contactInfo = CONTACTINFO;
-  contact: any;
+  
   constructor() { }
 
-
+  //read
   getContact(): Observable<contactInfo[]> {
     return of(this.contactInfo);
+  }
+
+  //create
+  create(contact: contactInfo): Observable<contactInfo> {
+    this.contact.push(contact);
+    return of(contact);
   }
 
   updateContactDetails?: contactInfo;
